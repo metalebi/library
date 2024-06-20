@@ -36,34 +36,34 @@
         }
       }
     },
-    "magic-lib-app": {
+    "magic-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/magic-lib-app",
-      "sourceRoot": "projects/magic-lib-app/src",
+      "root": "projects/magic-app",
+      "sourceRoot": "projects/magic-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/magic-lib-app",
-            "index": "projects/magic-lib-app/src/index.html",
-            "main": "projects/magic-lib-app/src/main.ts",
+            "outputPath": "dist/magic-app",
+            "index": "projects/magic-app/src/index.html",
+            "main": "projects/magic-app/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/magic-lib-app/tsconfig.app.json",
+            "tsConfig": "projects/magic-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/magic-lib-app/src/favicon.ico",
-              "projects/magic-lib-app/src/assets"
+              "projects/magic-app/src/favicon.ico",
+              "projects/magic-app/src/assets"
             ],
             "styles": [
-              "projects/magic-lib-app/src/styles.scss"
+              "projects/magic-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -98,10 +98,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "magic-lib-app:build:production"
+              "browserTarget": "magic-app:build:production"
             },
             "development": {
-              "browserTarget": "magic-lib-app:build:development"
+              "browserTarget": "magic-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,7 +109,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "magic-lib-app:build"
+            "browserTarget": "magic-app:build"
           }
         },
         "test": {
@@ -119,14 +119,14 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/magic-lib-app/tsconfig.spec.json",
+            "tsConfig": "projects/magic-app/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/magic-lib-app/src/favicon.ico",
-              "projects/magic-lib-app/src/assets"
+              "projects/magic-app/src/favicon.ico",
+              "projects/magic-app/src/assets"
             ],
             "styles": [
-              "projects/magic-lib-app/src/styles.scss"
+              "projects/magic-app/src/styles.scss"
             ],
             "scripts": []
           }

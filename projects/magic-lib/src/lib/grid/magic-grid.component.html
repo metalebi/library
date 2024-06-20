@@ -1,0 +1,16 @@
+<ag-grid-angular #agGrid class="ag-theme-balham" [ngStyle]="styleBodyGrid" [rowData]="rowData"
+    [columnDefs]="columnDefs" [enableRtl]="true" [statusBar]="statusBar" [defaultColDef]="defaultColDef"
+    [rowSelection]="rowSelection" [enableRtl]="enableRtl" [overlayNoRowsTemplate]="noRowTemplate"
+    [pagination]="pagination" [paginationAutoPageSize]="paginationPageSize>0?false:true"
+    [paginationPageSize]="paginationPageSize" [debug]="false" [animateRows]="animateRows" [suppressRowTransform]="true"
+    [rowDragManaged]="true" [loadingOverlayComponent]="loadingOverlayComponent" [gridOptions]="gridOptions"
+    [singleClickEdit]="true" [detailCellRenderer]="'myDetailCellRenderer'" [masterDetail]="masterDetail"
+    [detailRowHeight]="detailRowHeight" [getRowHeight]="getRowHeight" [excelStyles]="excelStyles"
+    [suppressRowClickSelection]="suppressRowClickSelection" [groupDisplayType]="groupDisplayType"
+    [autoGroupColumnDef]="autoGroupColumnDef" [groupDefaultExpanded]="groupDefaultExpanded" [getDataPath]="getDataPath"
+    [treeData]="isTreeData" [groupSelectsChildren]="true" [getRowStyle]="getRowStyle" [tooltipShowDelay]="50"
+    [rowBuffer]="rowBuffer" [localeText]="AG_GRID_LOCALE_FA" [isExternalFilterPresent]="isExternalFilterPresent"
+    [isRowSelectable]="isRowSelectable"
+    (gridReady)="gridReady($event)"
+    (rowSelected)="rowSelected($event)" (rowClicked)="rowClicked($event)" (cellClicked)="cellClicked($event)">
+</ag-grid-angular>

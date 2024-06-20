@@ -22,6 +22,7 @@
     "ag-grid-angular": "^31.0.3",
     "ag-grid-community": "^31.0.3",
     "ag-grid-enterprise": "^31.0.3",
+    "jalali-moment": "^3.3.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
