@@ -1,0 +1,14 @@
+@import "./validation.scss";
+@mixin textColorAnimation(
+    $colorOne: $color-primary,
+    $colorTwo: $color-primary,
+    $colorThree: $color-black,
+    $secondAnimation: 1
+) {
+    background: linear-gradient(to right, $colorOne 10%, $colorTwo 30%, $colorThree 60%);
+    text-transform: uppercase;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textClipButton $secondAnimation linear infinite;
+}

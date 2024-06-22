@@ -1,0 +1,11 @@
+input{
+    position: absolute;
+    left: -25px;
+    right: 0px;
+    height: 27px;
+    top: 2px;
+}
+.active{
+    box-shadow: 0 0 2px 0px red;
+    border: 0px;
+}

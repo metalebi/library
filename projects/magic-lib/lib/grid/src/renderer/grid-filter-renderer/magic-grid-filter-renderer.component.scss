@@ -1,0 +1,64 @@
+.filter{
+    .input-search{
+        width: 90%;
+        margin: 5px 5% 5px 0;
+        border: 1px solid #939393;
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 2px 0px #009dff;
+        }
+    }
+    .text-title{
+        margin: 5px 10px;
+        position: relative;
+        padding-right: 20px;
+        .checkbox-for-checked{
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            border: 1px solid #707070;
+            border-radius: 3px;
+            box-shadow: 0 0 1px 0 #7e7e7e;
+            position: absolute;
+            right: 0;
+            &.active{
+                box-shadow: 0 0 2px 0px #0a78ff;
+                border-color: #0085e6;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 1px;
+                    top: 8px;
+                    width: 5px;
+                    background: #057ec9;
+                    height: 1px;
+                    transform: rotate(45deg);
+                    border-radius: 5px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    right: 0px;
+                    top: 6px;
+                    width: 10px;
+                    background: #057ec9;
+                    height: 1px;
+                    transform: rotate(-52deg);
+                    border-radius: 5px;
+                }
+            }
+            &.some-checked{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 2px;
+                    right: 2px;
+                    height: 2px;
+                    background: #9c9c9c;
+                    top: 5.5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

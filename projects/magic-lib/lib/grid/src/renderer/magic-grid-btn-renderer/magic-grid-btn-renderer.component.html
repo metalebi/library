@@ -1,0 +1,25 @@
+<ng-container *ngFor="let item of buttonList;let i=index">
+    <button *ngIf="showButton(item.show)" [ngStyle]="style(item)" class="onlyIcon button_grid" mat-icon-button
+        [class.disabled_icon]="isDisableItem(item)" [disabled]="isDisableItem(item)" [ngClass]="classBtn(item)"
+        [magicTooltip]="getCallFunction(item.tooltip)" [magicTooltipPosition]="'above'"
+        [matBadge]="getBadge(item?.countBadge)" (click)="clickButton(item,i)">
+        <mat-icon *ngIf="item?.icon" [ngClass]="sizeIcon?sizeIcon:'sm'">{{getCallFunction(item.icon)}}</mat-icon>
+    </button>
+    <button *ngIf="showButton(item.show)" [ngStyle]="style(item)" class="onlyIcon button_grid" mat-icon-button
+        [class.disabled_icon]="isDisableItem(item)" [disabled]="isDisableItem(item)" [ngClass]="classBtn(item)"
+        (click)="clickButton(item,i)">
+        <mat-icon *ngIf="item?.icon" [ngClass]="sizeIcon?sizeIcon:'sm'">{{getCallFunction(item.icon)}}</mat-icon>
+    </button>
+</ng-container>
+<div class="show-chil-btn" *ngIf="childButtons?.length" [ngStyle]="{'left.px':leftChildBtn}">
+    <mat-icon class="close-child">cancel</mat-icon>
+    <ng-container *ngFor="let item of childButtons;let i=index">
+        <p [ngStyle]="style(item,true)">
+            <magic-button *ngIf="showButton(item.show)" [disabled]="isDisableItem(item)"
+                [tooltip]="getCallFunction(item?.tooltip)" [color]="getColor(item.color)"
+                (coClick)="clickButton(item,i)" [matBadge]="getBadge(item.countBadge)"
+                [fontSize]="sizeIcon?sizeIcon:'sm'" [icon]="getCallFunction(item?.icon)" [onlyIcon]="true">
+            </magic-button>
+        </p>
+    </ng-container>
+</div>

@@ -1,0 +1,26 @@
+<ng-container *ngIf="!onlyIcon">
+    <button #button [ngStyle]="style" mat-raised-button class="btn button-icon" [disabled]="_disabledBtn()"
+        [ngClass]="_classBtn()" (click)="_clickButton()" type="button" [magicTooltip]="tooltip" matRipple
+        [matRippleRadius]="40" [matRippleCentered]="true">
+        <mat-icon *ngIf="icon?.length">{{icon}}</mat-icon>
+        <span>
+            <ng-content></ng-content>
+        </span>
+    </button>
+</ng-container>
+<ng-container *ngIf="onlyIcon">
+    <ng-container *ngIf="type=='icon';else showButtonFub">
+        <button #button [ngStyle]="style" mat-icon-button class="onlyIcon" [disabled]="_disabledBtn()"
+            (click)="_clickButton()" [class.disabled_icon]="_disabledBtn()" [magicTooltip]="tooltip"
+            [magicTooltipPosition]="'above'" [ngClass]="'text-'+color">
+            <mat-icon [ngClass]="fontSize">{{icon}}</mat-icon>
+        </button>
+    </ng-container>
+    <ng-template #showButtonFub>
+        <button #button [ngStyle]="style" mat-mini-fab class="onlyIcon text-white" [disabled]="_disabledBtn()"
+            (click)="_clickButton()" [magicTooltip]="tooltip" [class.disabled_icon]="_disabledBtn()"
+            [magicTooltipPosition]="'above'" [ngClass]="'bg-'+color">
+            <mat-icon [ngClass]="fontSize">{{icon}}</mat-icon>
+        </button>
+    </ng-template>
+</ng-container>

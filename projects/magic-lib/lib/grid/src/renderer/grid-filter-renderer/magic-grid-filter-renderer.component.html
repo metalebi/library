@@ -1,0 +1,10 @@
+<div class="filter">
+    <input placeholder="'جستجو'" class="input-search" [(ngModel)]="textSearch">
+    <p *ngFor="let item of filterCheckedList | magicGridFilterRendererInputPipe:textSearch;let i =index"
+        class="text-title" (click)="changeChecked(item)">
+        <span class="checkbox-for-checked" [ngClass]="{'active':item.checked&&item?.isMain!='someChecked'&&item?.isMain!='empty',
+  'some-checked':item?.isMain=='someChecked'}">
+        </span>
+        {{item?.title}}
+    </p>
+</div>

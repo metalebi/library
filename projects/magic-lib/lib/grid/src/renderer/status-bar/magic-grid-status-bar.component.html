@@ -1,0 +1,13 @@
+<div class="status-bar">
+    <p>
+        جستجو سریع
+        <input #inputSearch [class.is-value]="inputSearch?.value?.length"
+            (keyup)="changeInputSearch(inputSearch.value)">
+    </p>
+    <p class="count">
+        تعداد رکورد : {{params.api.getDisplayedRowCount()}}
+    </p>
+    <p class="count">
+        تعداد رکورد انتخاب شده : {{params.api.getSelectedNodes()}}
+    </p>
+</div>

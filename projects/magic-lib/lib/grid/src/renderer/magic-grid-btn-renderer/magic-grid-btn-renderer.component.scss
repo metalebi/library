@@ -1,0 +1,34 @@
+.show-child-btn {
+    position: absolute;
+    z-index: 1;
+    max-width: 160px;
+    width: max-content;
+    background: white;
+    top: 0;
+    filter: drop-shadow(2px 4px 4px black);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    direction: rtl;
+    .close-child {
+        position: absolute;
+        right: -10px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        color: #ff0000c9;
+        background: #fff;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover {
+            filter: drop-shadow(1px 2px 2px black);
+            color: red;
+        }
+    }
+    p {
+        display: inline-block;
+        margin: 0;
+    }
+}
