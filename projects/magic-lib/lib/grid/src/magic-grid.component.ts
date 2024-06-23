@@ -23,6 +23,7 @@ import { MagicTypeHelper } from '../../other/helper/type-helper/magic-type-helpe
 import { MagicFormatterTypeEnm } from '../../other/model/enm/magicFormatterTypeEnm';
 import { MagicDateCalendarTypeEnm } from '../../other/model/enm/magicDateCalendarTypeEnm';
 import { MagicStyleType } from '../../other/helper/type/defult.type';
+import { MagicGridBtnRendererComponent } from './renderer/magic-grid-btn-renderer/magic-grid-btn-renderer.component';
 
 
 
@@ -33,69 +34,11 @@ import { MagicStyleType } from '../../other/helper/type/defult.type';
 })
 export class MagicGridComponent implements OnInit, AfterViewInit {
   @ViewChild('agGrid') agGrid!: AgGridAngular | undefined;
-  constructor(private http: HttpClient) {
-    this.gridConfig.columns = [
-      {
-        field: 'athlete',
-        width: 200,
-        headerName: 'ورزشکار',
-        filter: false,
-        checkboxSelection: true,
-      },
-      {
-        field: 'age',
-        width: 100,
-        headerName: 'سن',
-        filter: 'agNumberColumnFilter',
-
-      },
-      {
-        field: 'country',
-        width: 150,
-        headerName: 'کشور',
-        filter: 'agTextColumnFilter',
-      },
-      {
-        field: 'year',
-        width: 120,
-        headerName: 'سال',
-        filter: 'agDateColumnFilter',
-      },
-      {
-        field: 'sport',
-        width: 200,
-        headerName: 'ورزش',
-        filter: 'agMultiColumnFilter',
-      },
-      {
-        field: 'gold',
-        width: 100,
-        headerName: 'طلا',
-      },
-      {
-        field: 'silver',
-        width: 100,
-        headerName: 'نقره',
-      },
-      {
-        field: 'bronze',
-        width: 100,
-        headerName: 'برنز',
-        filter: 'agTextColumnFilter'
-      },
-    ];
-    this.gridConfig={...this.gridConfig}
-
-  }
+  constructor() {}
   ngAfterViewInit(): void {
     this.setStyleGrid();
   }
   ngOnInit(): void {
-    this.http
-      .get('https://www.ag-grid.com/example-assets/olympic-winners.json')
-      .subscribe((data) => {
-        this.rowData = data as any[];
-      });
   }
   option = {
     Headers: new HttpHeaders({
@@ -486,7 +429,7 @@ export class MagicGridComponent implements OnInit, AfterViewInit {
       }
       if (element?.isButtonCell) {
         columnDef.cellRenderer = this.nameCellBtnTable;
-        this.frameWorkComponent[this.nameCellBtnTable] = MagicGridBtnHeaderComponent
+        this.frameWorkComponent[this.nameCellBtnTable] = MagicGridBtnRendererComponent
       }
       if (element.checkboxSelection) {
         columnDef.checkboxSelection = () => true;

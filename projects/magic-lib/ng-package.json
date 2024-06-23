@@ -2,6 +2,14 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/magic-lib",
   "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "entryFile": "./public-api.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "bootstrap",
+    "jalali-moment",
+    "ag-grid-angular",
+    "ag-grid-community",
+    "ag-grid-enterprise",
+    "@angular/material"
+  ]
 }

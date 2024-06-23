@@ -36,6 +36,7 @@ export class MagicGridBtnHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
   @Input() header?: IMagicGridConfigHeader;
   disabledBtn(btnHeader: IMagicGridConfigButtonHeader): boolean {

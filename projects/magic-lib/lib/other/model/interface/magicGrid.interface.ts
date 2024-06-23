@@ -1,5 +1,5 @@
 import { ComponentType } from "ag-grid-community";
-import { MagicButtonType, MagicColorType, MagicSizeType, MagicStylePropertyType } from "../../helper/type/defult.type";
+import { MagicButtonType, MagicColorType, MagicSizeType, MagicStylePropertyType, MagicStyleType } from "../../helper/type/defult.type";
 import { IMagicFormatterType } from "./magicFormatterType.interface";
 
 
@@ -174,9 +174,7 @@ export interface IMagicGridColumnTooltip<T = any> {
     styleBody?: MagicStyleType | ((params: IValueGetterParams<T>) => MagicStyleType)
 }
 export type groupDisplayType = 'singleColumn' | 'multipleColumns' | 'groupRows' | 'custom';
-export type MagicStyleType = {
-    [key in MagicStylePropertyType]?: string | number;
-}
+
 export interface MagicGridColumnFilter<T=any> {
     filterListItems: () => string[];
     isFilter: ((request: IMagicGridColumnFilterIsFilter<T>) => boolean)
