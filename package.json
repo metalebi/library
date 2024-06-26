@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
-    "ag-grid-angular": "^31.0.3",
+    "ag-grid-angular": "^31.3.2",
     "ag-grid-community": "^31.0.3",
     "ag-grid-enterprise": "^31.0.3",
     "jalali-moment": "^3.3.11",

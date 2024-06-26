@@ -77,6 +77,9 @@ export class GridComponent implements OnInit {
         filter: false,
       },
     ],
+    statusBar:{
+      show:true
+    }
   }
   gridButtons:IMagicGridButton<any>={
     buttons:[

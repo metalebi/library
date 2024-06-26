@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MagicGridComponent } from './magic-grid.component';
-import { AgGridModule } from 'ag-grid-angular';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MagicGridCustomLoadingOverlayComponent } from './renderer/custom-loading-overlay/magic-grid-custom-loading-overlay.component';
 import { MagicGridTooltipComponent } from './renderer/tooltip/magic-grid-tooltip.component';
@@ -20,6 +18,8 @@ import { MagicGridFilterRendererInputPipePipe } from './renderer/grid-filter-ren
 import { MagicTooltipModule } from '../../tooltip/src/magic-tooltip.module';
 import { MagicButtonModule } from '../../button/magic-button/magic-button.module';
 import { MatButtonModule } from '@angular/material/button';
+import { AgGridModule } from 'ag-grid-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -48,7 +48,6 @@ import { MatButtonModule } from '@angular/material/button';
     MagicButtonModule,
     MatBadgeModule,
     ClipboardModule,
-    ReactiveFormsModule,
     MatButtonModule,
   ],
   exports: [
